@@ -76,6 +76,7 @@ public class AlugarService {
         double pagamentoBasico;
         double imposto;
 
+        //Tempo do aluguel menor que 12 horas
         if(horas <= 12) {
             pagamentoBasico = precoHora * Math.ceil(horas);
 
@@ -90,6 +91,7 @@ public class AlugarService {
             
         }
         else {
+            //Passou de 12 horas contabiliza como dia
             pagamentoBasico = this.precoDia * Math.ceil(horas / 24.0);
             
             if ((pagamentoBasico <= 100)) {

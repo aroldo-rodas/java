@@ -23,6 +23,7 @@ public class App {
         double precoHora = sc.nextDouble();
         System.out.print("Preço dia: ");
         double precoDia = sc.nextDouble();
+        
         sc.close();
         
         AlugarService cliente = new AlugarService(inicio, fim, precoHora, precoDia, carro);
