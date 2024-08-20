@@ -12,6 +12,4 @@ public abstract class AbstractShape implements Shape{
     public void setColor(Color color) {
         this.color = color;
     }
-
-    
 }
