@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -11,9 +12,10 @@ public class App {
         lista.add(new Produto("Tablet", 350.0));
         lista.add(new Produto("HD Case", 80.90));
 
-        //Percorre a lista em cada elemento
-        //Implementação com interface
-        lista.forEach(new AumentarPreco());
+        //Implementação com expressão lambda declarada
+        Consumer<Produto> cons = p -> p.setPreco(p.getPreco() * 1.1);
+
+        lista.forEach(cons);
 
         //Reference method para o Sout
         lista.forEach(System.out::println);

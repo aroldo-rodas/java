@@ -11,9 +11,8 @@ public class App {
         lista.add(new Produto("Tablet", 350.0));
         lista.add(new Produto("HD Case", 80.90));
 
-        //Percorre a lista em cada elemento
-        //Implementação com interface
-        lista.forEach(new AumentarPreco());
+        //Implementação com reference method estático
+        lista.forEach(Produto::aumentar);
 
         //Reference method para o Sout
         lista.forEach(System.out::println);
